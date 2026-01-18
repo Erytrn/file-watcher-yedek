@@ -1,18 +1,24 @@
 # File Watcher & Executor (Dosya İzleyici ve Çalıştırıcı)
 
-Bu proje, belirlenen bir dizindeki dosya değişikliklerini (oluşturma, silme, değiştirme) gerçek zamanlı izleyen ve buna bağlı olarak otomatik komut çalıştıran bir otomasyon aracıdır. VirtualBox gerektirmez, Go ve fsnotify kullanılarak performanslı bir şekilde tasarlanmıştır.
+![Go Version](https://img.shields.io/badge/Go-1.25-blue?style=flat&logo=go)
+![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey)
+![Status](https://img.shields.io/badge/Status-Active-success)
 
-## Özellikler
+Bu proje, belirlenen bir dizindeki dosya değişikliklerini (oluşturma, silme, değiştirme) gerçek zamanlı izleyen ve buna bağlı olarak otomatik komut çalıştıran bir otomasyon aracıdır. **VirtualBox gerektirmez**, doğrudan işletim sistemi çekirdeği (Kernel) üzerinden olayları dinler.
 
-- **Event Loop:** Dosya sistemi olaylarını asenkron olarak dinler.
-- **Filtreleme:** Sadece `.js` ve `.py` uzantılı dosyalardaki değişimleri algılar.
-- **Debounce (Geciktirme):** Üst üste gelen kayıt işlemlerini gruplayarak gereksiz komut tekrarını önler (500ms).
-- **Otomasyon:** Değişiklik algılandığında belirlenen terminal komutunu çalıştırır.
+---
 
-## Kurulum ve Çalıştırma
+## 📂 Proje Yapısı
 
-1. Projeyi indirin.
-2. `src` klasörüne gidin.
-3. Aşağıdaki komutla çalıştırın:
-   ```bash
-   go run main.go
+Proje, profesyonel geliştirme standartlarına uygun olarak modüler bir yapıda tasarlanmıştır:
+
+```text
+dosya-izleyici/
+├── 📂 src/             # Kaynak kodlar (Source Code)
+│   ├── main.go         # Ana uygulama dosyası
+│   ├── go.mod          # Modül tanımları
+│   └── go.sum          # Bağımlılık sağlama dosyası
+├── 📂 docs/            # Teknik dökümantasyon ve mimari şema
+├── 📂 specs/           # Proje gereksinimleri ve analizler
+├── 📂 researchs/       # Teknik araştırma ve dil seçim notları
+└── 📄 README.md        # Proje tanıtım dosyası
