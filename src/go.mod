@@ -1,4 +1,4 @@
-module dosya-izleyici
+module file-watcher-executor
 
 go 1.25.6
 
